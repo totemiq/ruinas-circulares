@@ -46,9 +46,9 @@ export default function CellularAutomaton({
     for (let x = 0; x < XCells; x++) {
       for (let y = 0; y < YCells; y++) {
         if (state[x][y] === 1) {
-          ctx.fillStyle = "black";
-        } else {
           ctx.fillStyle = "white";
+        } else {
+          ctx.fillStyle = "black";
         }
 
         ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
