@@ -2,6 +2,7 @@
 import { h, Fragment } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
+
 import CellularAutomaton from "../components/CellularAutomaton.tsx";
 
 type AppProps = {};
@@ -13,9 +14,12 @@ export default function App({}: AppProps) {
     <div>
       {isReady ? (
         <div
-          class={tw`z-0 absolute top-0 left-0 w-screen h-screen bg-gradient-to-t from-secondary via-primary to-primary`}
+          class={tw`z-0 absolute top-0 left-0 w-screen h-screen bg-gray-400`}
         />
       ) : (
+        // <div
+        //   class={tw`z-0 absolute top-0 left-0 w-screen h-screen bg-gradient-to-t from-secondary via-primary to-primary`}
+        // />
         <div class={tw`z-20 absolute top-0 left-0 w-screen h-screen bg-black`}>
           <div class={tw`flex justify-center`}>
             <div class={tw`h-screen flex flex-col justify-center`}>
@@ -30,12 +34,12 @@ export default function App({}: AppProps) {
         >
           <div class={tw`h-1`} />
           <img
-            src="/totemiq/ruinas_circulares_baja.jpg"
+            src="/totemiq/ruinas_transparent.png"
             class={tw`max-h-screen object-contain`}
           />
         </div>
       </div>
-      <CellularAutomaton cellSize={50} onReady={() => setIsReady(true)} />
+      <CellularAutomaton onReady={() => setIsReady(true)} />
     </div>
   );
 }

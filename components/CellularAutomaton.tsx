@@ -8,12 +8,16 @@ import { tw } from "@twind";
 interface CellularAutomatonProps {
   cellSize?: number;
   onReady?: () => void;
+  liveCellColor?: string;
+  deadCellColor?: string;
 }
 
 // type Board = ;
 
 export default function CellularAutomaton({
   cellSize = 50,
+  liveCellColor = "#ffffff",
+  deadCellColor = "#000000",
   onReady,
 }: CellularAutomatonProps) {
   const [state, setState] = useState(new Array<Array<number>>(0));
@@ -46,9 +50,9 @@ export default function CellularAutomaton({
     for (let x = 0; x < XCells; x++) {
       for (let y = 0; y < YCells; y++) {
         if (state[x][y] === 1) {
-          ctx.fillStyle = "white";
+          ctx.fillStyle = liveCellColor;
         } else {
-          ctx.fillStyle = "black";
+          ctx.fillStyle = deadCellColor;
         }
 
         ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
@@ -162,9 +166,11 @@ export default function CellularAutomaton({
   //     ctx && render(ctx);
   //   }, [size]);
 
+  // mix-blend-difference
+  // multiply
   return (
     <div
-      class={tw`z-20 mix-blend-multiply absolute top-0 left-0 w-screen h-screen`}
+      class={tw`z-20 mix-blend-difference absolute top-0 left-0 w-screen h-screen`}
     >
       <canvas id="canvas"></canvas>
     </div>
