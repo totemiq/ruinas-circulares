@@ -1,4 +1,6 @@
-# fresh project
+# Ruinas Circulares
+
+Colaboracion Totemiq x Minsky
 
 ### Usage
 
