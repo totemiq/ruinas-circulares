@@ -2,7 +2,7 @@
 import { h, Fragment } from "preact";
 import { useState } from "preact/hooks";
 import { tw } from "@twind";
-import CellularAutomaton from "./CellularAutomaton.tsx";
+import CellularAutomaton from "../components/CellularAutomaton.tsx";
 
 type AppProps = {};
 
