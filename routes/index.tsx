@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <Fragment>
       <App />
-
       <div class={tw`z-20 absolute top-0 left-0 w-screen h-screen`}>
         <div class={tw`flex m-6`}>
           <div class={tw` bg-white rounded-lg`}>

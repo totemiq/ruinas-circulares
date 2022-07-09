@@ -47,10 +47,13 @@ export default function App({}: AppProps) {
           class={tw`mx-auto max-w-screen-md flex flex-col justify-between h-screen`}
         >
           <div class={tw`h-1`}></div>
-          <img src="/totemiq/ruinas_circulares_baja.jpg" />
+          <img
+            src="/totemiq/ruinas_circulares_baja.jpg"
+            class={tw`max-h-screen object-contain`}
+          />
         </div>
       </div>
-      <CellularAutomaton cellSize={20} onReady={() => setIsReady(true)} />
+      <CellularAutomaton cellSize={50} onReady={() => setIsReady(true)} />
     </Fragment>
   );
 }

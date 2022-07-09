@@ -113,9 +113,7 @@ export default function CellularAutomaton({
 
         const neighbors = countNeighbors(x, y);
 
-        // console.log(neighbors);
-
-        if (neighbors === 3 || neighbors === 7) {
+        if (neighbors === 3 || neighbors === 6) {
           newState[x][y] = 1;
           continue;
         }
@@ -123,22 +121,14 @@ export default function CellularAutomaton({
         if (neighbors < 2 || neighbors > 3) {
           newState[x][y] = 0;
         }
-
-        // console.log(newState[x][y]);
       }
     }
-
-    // console.log("step");
-    // console.log(newState);
-    // setState(newState);
 
     for (let x = 0; x < XCells; x++) {
       for (let y = 0; y < YCells; y++) {
         state[x][y] = newState[x][y];
       }
     }
-
-    // setState(state);
   };
 
   const getDrawContext = (): CanvasRenderingContext2D | null => {
@@ -161,7 +151,7 @@ export default function CellularAutomaton({
       //   console.log("step");
       ctx && step(ctx);
       ctx && render(ctx);
-    }, 100);
+    }, 200);
   }, []);
 
   //   useEffect(() => {
