@@ -7,12 +7,14 @@ import { tw } from "@twind";
 
 interface CellularAutomatonProps {
   cellSize?: number;
+  onReady?: () => void;
 }
 
 // type Board = ;
 
 export default function CellularAutomaton({
   cellSize = 50,
+  onReady,
 }: CellularAutomatonProps) {
   //   const size = useWindowSize();
 
@@ -152,6 +154,8 @@ export default function CellularAutomaton({
 
     ctx && init(ctx);
     ctx && render(ctx);
+
+    setTimeout(() => onReady && onReady(), 1000);
 
     const interval = setInterval(() => {
       //   console.log("step");
