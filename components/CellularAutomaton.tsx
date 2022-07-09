@@ -150,6 +150,8 @@ export default function CellularAutomaton({
       ctx && step(ctx);
       ctx && render(ctx);
     }, 200);
+
+    return () => clearInterval(interval);
   }, []);
 
   //   useEffect(() => {
