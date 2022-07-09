@@ -16,8 +16,6 @@ export default function CellularAutomaton({
   cellSize = 50,
   onReady,
 }: CellularAutomatonProps) {
-  //   const size = useWindowSize();
-
   const [state, setState] = useState(new Array<Array<number>>(0));
 
   const init = (ctx: CanvasRenderingContext2D) => {
