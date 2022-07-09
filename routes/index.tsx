@@ -23,7 +23,7 @@ export default function Home() {
       <div class={tw`z-20 absolute top-0 left-0 w-screen h-screen`}>
         <div class={tw`flex m-6`}>
           <div class={tw` bg-white rounded-lg`}>
-            <p class={tw`my-3 mx-4 text-3xl`}>Ruinas Circulares</p>
+            <p class={tw`my-3 mx-4 text-2xl`}>Ruinas Circulares</p>
           </div>
         </div>
       </div>
