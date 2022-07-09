@@ -20,7 +20,6 @@ export default function Home() {
           <img src="/totemiq/ruinas_circulares_baja.jpg" />
         </div>
       </div>
-
       <div class={tw`z-20 absolute top-0 left-0 w-screen h-screen`}>
         <div class={tw`flex m-6`}>
           <div class={tw` bg-white rounded-lg`}>

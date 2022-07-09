@@ -12,7 +12,7 @@ interface CellularAutomatonProps {
 // type Board = ;
 
 export default function CellularAutomaton({
-  cellSize = 30,
+  cellSize = 50,
 }: CellularAutomatonProps) {
   //   const size = useWindowSize();
 
@@ -113,7 +113,7 @@ export default function CellularAutomaton({
 
         // console.log(neighbors);
 
-        if (neighbors === 3) {
+        if (neighbors === 3 || neighbors === 7) {
           newState[x][y] = 1;
           continue;
         }
