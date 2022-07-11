@@ -115,7 +115,7 @@ export default function CellularAutomaton({
 
         const neighbors = countNeighbors(x, y);
 
-        if (neighbors === 3 || neighbors === 6) {
+        if (neighbors === 3 || neighbors === 7) {
           newState[x][y] = 1;
           continue;
         }
