@@ -15,7 +15,7 @@ interface CellularAutomatonProps {
 // type Board = ;
 
 export default function CellularAutomaton({
-  cellSize = 50,
+  cellSize = 60,
   liveCellColor = "#ffffff",
   deadCellColor = "#000000",
   onReady,
