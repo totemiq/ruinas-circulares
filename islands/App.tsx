@@ -17,8 +17,9 @@ const illustrations = [
 export default function App({}: AppProps) {
   const [isReady, setIsReady] = useState(false);
 
-  const imageSource =
-    illustrations[Math.floor(Math.random() * illustrations.length)];
+  const [imageSource] = useState(
+    illustrations[Math.floor(Math.random() * illustrations.length)]
+  );
 
   return (
     <div>
